@@ -27,8 +27,32 @@ require_once("config.php");
 
 
 //carrega um usuario usando o login e a senha
+//$usuario = new Usuario();
+//$usuario->login("Gabriel","12345");
+//echo $usuario;
+
+//cadastra um usuario
+//$aluno = new Usuario();
+//$aluno->setLogin("Aluno");
+//$aluno->setSenha("12345");
+//$aluno->insert();
+//echo $aluno;
+
+/*
+//faz um update
 $usuario = new Usuario();
-$usuario->login("Gabriel","12345");
+//ele carrega as informacaos do id 6 atraves do metodo loadById
+$usuario->loadByid(6);
+//faz a alteracao do cadastro atraves do metodo update
+$usuario->update("Professor", "123456");
+echo $usuario;
+*/
+
+//fazendo um delete 
+$usuario = new Usuario();
+$usuario->loadByid(1);
+$usuario->delete();
 
 echo $usuario;
+
 ?>
